@@ -3,8 +3,7 @@
 # GPR Concrete Wall Analysis
 
 ## Overview
-This project focuses on the processing and interpretation of Ground Penetrating Radar (GPR) data acquired from a concrete wall in a basement car box. The primary objective was to process 15 parallel vertical profiles to detect and visualize the reinforcement rebars structure.
-The project moves from raw data analysis to a full 3D cube representation, enabling a clear view of the rebar layout within the wall.
+The primary objective was to process 15 parallel vertical profiles to detect and visualize the reinforcement rebars structure. The project moves from raw data analysis to a full 3D cube representation, enabling a clear view of the rebar layout within the wall.
 
 ## Parameters
 The dataset consists of 15 parallel vertical profiles collected with the following specifications:
@@ -29,12 +28,12 @@ The data was processed using Reflexw software through the following pipeline:
 
 ### 2. Signal Filtering
 To improve the signal-to-noise ratio:
-* **Bandpass Butterworth Filter:** Applied to isolate the most energetic region of the spectrum (Lower Cutoff: 650 MHz, Upper Cutoff: 4030 MHz).
+* **Bandpass Butterworth Filter:** Applied to isolate the most energetic region of the spectrum.
 * **Background Subtraction:** A subtracting average procedure (window: 250 traces) was used to remove background noise and horizontal ringing.
 
 ### 3. Velocity Analysis & Migration
 * **Velocity Analysis:** By fitting diffraction hyperbolas, the propagation velocity was estimated at 0.135 m/ns.
-* **Migration (Diffraction Stack):** This step collapsed the diffraction hyperbolas to correctly position the targets. A summation width of 50 was calculated based on the hyperbola aperture (~0.2m).
+* **Migration (Diffraction Stack):** This step collapsed the diffraction hyperbolas to correctly position the targets.
 
 ### 4. Visualization
 * **Envelope Extraction:** Calculated to visualize signal energy strength.
